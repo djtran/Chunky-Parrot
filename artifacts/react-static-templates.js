@@ -23,12 +23,16 @@ const t_1 = universal(import('__react_static_root__/src/pages/index.js'), univer
 const t_2 = universal(import('__react_static_root__/src/containers/Workflow'), universalOptions)
       t_2.template = '__react_static_root__/src/containers/Workflow'
       
+const t_3 = universal(import('__react_static_root__/src/containers/WorkflowIndex'), universalOptions)
+      t_3.template = '__react_static_root__/src/containers/WorkflowIndex'
+      
 
 // Template Map
 export default {
   '__react_static_root__/src/pages/404.js': t_0,
 '__react_static_root__/src/pages/index.js': t_1,
-'__react_static_root__/src/containers/Workflow': t_2
+'__react_static_root__/src/containers/Workflow': t_2,
+'__react_static_root__/src/containers/WorkflowIndex': t_3
 }
 // Not Found Template
 export const notFoundTemplate = "__react_static_root__/src/pages/404.js"

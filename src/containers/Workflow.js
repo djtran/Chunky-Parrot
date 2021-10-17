@@ -8,7 +8,7 @@ function Workflow() {
   const { workflow } = useRouteData()
   return (
     <div>
-      <Link to="/">{'<'} Back</Link>
+      <Link to="/index">{'<'} Back</Link>
       <br />
       <h1>{workflow.title}</h1>
       <Sequence sequence={workflow.sequence} />

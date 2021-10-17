@@ -1,25 +1,33 @@
 import path from 'path'
-import axios from 'axios'
-import data from './public/workflows/example-workflow.json'
+import { promises as fs, readFileSync } from 'fs';
 
 export default {
   paths: {
     public: 'public'
   },
   getRoutes: async () => {
-    // const { data: posts } = await axios.get(
-    //   'https://jsonplaceholder.typicode.com/posts'
-    // )
-    var workflow = data;
-    console.log(workflow);
+    const dirPath = path.resolve('./public/workflows');
+    const wfilenames = await fs.readdir(dirPath);
+    const wfiles = [];
+    wfilenames.forEach(name => {
+      const data = JSON.parse(readFileSync(path.join(dirPath, name), 'utf-8'));
+      wfiles.push(data);
+    })
 
     return [
       {
-        path: `/test`,
-        getData: () => ({
-          workflow,
+        path: `/index`,
+        template: 'src/containers/WorkflowIndex',
+        getData: async() => ({
+          wfiles
         }),
-        template: 'src/containers/Workflow'
+        children: wfiles.map(workflow => ({
+          path: `/workflow/${workflow.title.replace(/\s/g, '-')}`,
+          template: 'src/containers/Workflow',
+          getData: async () => ({
+            workflow
+          })
+        }))
       }
     ]
   },
