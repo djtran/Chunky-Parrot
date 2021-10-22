@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSiteData } from 'react-static'
+import ChonkyBird from "../../public/ChonkyBird.png"
 
 export default function Home() {
   const { workflowDirectory } = useSiteData()
@@ -11,6 +12,7 @@ export default function Home() {
 
   return <div style={{ textAlign: 'center' }}>
     <h1>Welcome to Chunky Parrot!</h1>
+    <img src={ChonkyBird} alt="Green Chonky Bird" />
   </div>
 } 
 

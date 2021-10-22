@@ -1,5 +1,6 @@
 import React from 'react'
 import Slide from 'components/Slide'
+import { Card, ProgressBar, Button, Container, Row } from 'react-bootstrap'
 class Sequence extends React.Component {
 
     constructor(props) {
@@ -12,7 +13,7 @@ class Sequence extends React.Component {
         this.render = this.render.bind(this);
 
         this.state = {
-            index : 0,
+            index: 0,
             responses: [],
             result: ''
         };
@@ -20,14 +21,14 @@ class Sequence extends React.Component {
 
     handleResponseData(event) {
         this.state.responses[this.state.index] = event.target.value;
-        // this.responses[this.state.index] = event.target.value;
+        
+        this.complete();
     }
 
     handleNext() {
         let current = this.state.index;
         let nextIndex = Math.min(this.state.index + 1, this.props.sequence.length - 1);
         if (nextIndex == current) {
-            this.complete();
         }
         this.setState({
             index: nextIndex
@@ -43,39 +44,62 @@ class Sequence extends React.Component {
 
     complete() {
         this.setState({
-            result: this.state.responses.join()
+            result: this.state.responses.join(' ')
         })
     }
 
     render() {
         let current = this.props.sequence[this.state.index]
         let resp = this.state.responses[this.state.index];
+        let progress = (this.state.index + 1) / this.props.sequence.length * 100;
+
         if (!resp) {
             console.log("No response for this slide yet");
             resp = "";
         }
-        return <div>
-            <Slide 
-                    key={current.id}
-                    prompt={current.prompt} 
-                    response={resp}
-                    handleResponseData={this.handleResponseData} 
-                />
+        return <Container className="text-center">
 
-            <br/>
-            #{this.state.index + 1} out of {this.props.sequence.length}
-            <br/>
-            <button onClick={this.handleBack}>
-                Back
-            </button>
-            <button onClick={this.handleNext}>
-                Next
-            </button>
-            <div id="donedone">
-                {this.state.result}
-            </div>
-        </div>
-            
+            <Row>
+                <Slide
+                    key={current.id}
+                    prompt={current.prompt}
+                    response={resp}
+                    handleResponseData={this.handleResponseData}
+                />
+            </Row>
+
+            <br />
+
+            <ProgressBar
+                animated
+                variant="success"
+                now={progress}
+                label={`${this.state.index + 1} of ${this.props.sequence.length}`} />
+            <br />
+
+            <Card className="col">
+                <Card.Body>
+                    {this.state.result}
+                </Card.Body>
+            </Card>
+            <br />
+            <Row >
+                <Button
+                    className="col"
+                    variant="success"
+                    onClick={this.handleBack}>
+                    Back
+                </Button>
+                <div className="col-8" />
+                <Button
+                    className="col"
+                    variant="success"
+                    onClick={this.handleNext}>
+                    Next
+                </Button>
+            </Row>
+        </Container>
+
     }
 }
 

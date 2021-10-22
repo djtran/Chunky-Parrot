@@ -3,16 +3,17 @@ import { useRouteData } from 'react-static'
 //
 import { Link } from 'components/Router'
 import Sequence from 'components/Sequence'
+import { Container } from 'react-bootstrap'
 
 function Workflow() {
   const { workflow } = useRouteData()
   return (
-    <div>
-      <Link to="/index">{'<'} Back</Link>
+    <Container className="w-75">
+      <Link to="/index">{'<'} Back to Index</Link>
       <br />
       <h1>{workflow.title}</h1>
       <Sequence sequence={workflow.sequence} />
-    </div>
+    </Container>
   )
 }
 

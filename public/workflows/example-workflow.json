@@ -20,6 +20,10 @@
         {
             "id":5,
             "prompt": "This is nombre 5"
+        },
+        {
+            "id":6,
+            "prompt": "I made a new sixth prompt"
         }
     ]
 }
