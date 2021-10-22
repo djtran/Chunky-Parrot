@@ -2,9 +2,9 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "659946eff689a9b675ba",
-  "time": 1427,
-  "builtAt": 1634451326959,
+  "hash": "0746a5a01dc11f9b5c99",
+  "time": 3379,
+  "builtAt": 1634539936265,
   "publicPath": "/",
   "outputPath": "/home/djtran/Workspace/chunky-parrot/dist",
   "assetsByChunkName": {
@@ -15,7 +15,7 @@
     "main": "main.138f444c.js",
     "styles": [
       "styles.939b420d.css",
-      "templates/styles.4f9fde29.js"
+      "templates/styles.b9c31221.js"
     ],
     "vendors~main": "templates/vendors~main.4092d373.js"
   },
@@ -105,7 +105,7 @@
       "emitted": true
     },
     {
-      "name": "templates/styles.4f9fde29.js",
+      "name": "templates/styles.b9c31221.js",
       "size": 82,
       "chunks": [
         5
@@ -143,7 +143,7 @@
       ],
       "assets": [
         "styles.939b420d.css",
-        "templates/styles.4f9fde29.js",
+        "templates/styles.b9c31221.js",
         "templates/vendors~main.4092d373.js",
         "main.138f444c.js"
       ],
@@ -160,7 +160,7 @@
       ],
       "assets": [
         "styles.939b420d.css",
-        "templates/styles.4f9fde29.js",
+        "templates/styles.b9c31221.js",
         "templates/vendors~main.4092d373.js",
         "main.138f444c.js"
       ],
@@ -1644,9 +1644,9 @@
       ],
       "files": [
         "styles.939b420d.css",
-        "templates/styles.4f9fde29.js"
+        "templates/styles.b9c31221.js"
       ],
-      "hash": "6e686a319aac86dac2bb",
+      "hash": "69130581a9c198543293",
       "siblings": [
         4,
         6
@@ -1720,7 +1720,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 4,
-          "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1634451326564\n      var cssReload = require(\"/home/djtran/Workspace/chunky-parrot/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"hmr\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
+          "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1634539933929\n      var cssReload = require(\"/home/djtran/Workspace/chunky-parrot/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"hmr\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
         },
         {
           "id": "",
@@ -25474,7 +25474,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 4,
-      "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1634451326564\n      var cssReload = require(\"/home/djtran/Workspace/chunky-parrot/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"hmr\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
+      "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1634539933929\n      var cssReload = require(\"/home/djtran/Workspace/chunky-parrot/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"hmr\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
     },
     {
       "id": 129,
