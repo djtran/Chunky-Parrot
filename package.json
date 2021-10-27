@@ -1,5 +1,8 @@
 {
   "name": "chunky-parrot",
+  "version": "0.0.1",
+  "author": "David Tran <djtran.dev@gmail.com>",
+  "description": "Rule-based writing workflows tool for ELA students",
   "private": true,
   "scripts": {
     "start": "react-static start",
